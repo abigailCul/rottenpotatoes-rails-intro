@@ -29,7 +29,7 @@ class MoviesController < ApplicationController
      redirect_to movies_path(sort: session[:sort], ratings: session[:ratings])
     end
   end
-  
+
   def new
     # default: render 'new' template
   end
@@ -57,8 +57,7 @@ class MoviesController < ApplicationController
     flash[:notice] = "Movie '#{@movie.title}' deleted."
     redirect_to movies_path
   end
-  
-  private
+ private
 
   def check
     if params[:ratings]
