@@ -59,12 +59,12 @@ class MoviesController < ApplicationController
   end
  private
 
-  def check
-    if params[:ratings]
-      params[:ratings].keys
-    else
-      @all_ratings
-    end
-  end
+  #def check
+    #if params[:ratings]
+     # params[:ratings].keys
+    #else
+   #   @all_ratings
+  #  end
+#  end
 
 end
