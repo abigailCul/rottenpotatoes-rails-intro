@@ -12,10 +12,10 @@ class MoviesController < ApplicationController
 
   def index
     @all_ratings = Movie.order(:rating).select(:rating).map(&:rating).uniq
-    #@checked_ratings = check
-   # @checked_ratings.each do |rating|
-    #  params[rating] = true
-   # end
+    @checked_ratings = check
+    @checked_ratings.each do |rating|
+      params[rating] = true
+    end
 
     @sort = params[:sort] || session[:sort] 
     session[:ratings] = session[:ratings] || {'G'=>'','PG'=>'','PG-13'=>'','R'=>''}
