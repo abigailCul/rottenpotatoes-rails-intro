@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
     # will render app/views/movies/show.<extension> by default
   end
 
-  def index
+   def index
     @all_ratings = Movie.order(:rating).select(:rating).map(&:rating).uniq
     @checked_ratings = check
     @checked_ratings.each do |rating|
@@ -38,7 +38,7 @@ class MoviesController < ApplicationController
     else
       return @movies = Movie.all
     end
-end
+  end
 
   def new
     # default: render 'new' template
